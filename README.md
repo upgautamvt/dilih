@@ -43,7 +43,7 @@ running with docker
 
 ```sh
 # set DEV= to your device (check 'ip link')
-$ DEV=eth0 make run_docker
+$ DEV=enp1s0 make run_docker
 # press Ctrl+C when you want to resume normality
 ```
 
@@ -51,7 +51,7 @@ Or you can run the image from docker hub (no need to pull this repo):
 
 ```sh
 # set INTERFACE= to your device (check 'ip link')
-docker run --net=host --cap-add SYS_ADMIN -u0 -e INTERFACE=ens160 --rm pemcconnell/dilih:v0.0.1-pre
+docker run --net=host --cap-add SYS_ADMIN -u0 -e INTERFACE=enp1s0 --rm pemcconnell/dilih:v0.0.1-pre
 ```
 
 testing
@@ -78,5 +78,5 @@ clean
 -----
 
 ```sh
-$ DEV=eth0 make clean
+$ DEV=enp1s0 make clean
 ```

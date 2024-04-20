@@ -1,7 +1,7 @@
 .PHONY: build build_bpf build_go build_docker clean run_docker push_docker test
 .DEFAULT_GOAL = build
 
-DEV := ens160
+DEV := enp1s0
 TAG := v0.0.1-pre
 
 build_bpf:

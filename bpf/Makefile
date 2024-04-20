@@ -5,7 +5,7 @@ BPF_OBJ = ${BPF_C:.c=.o}
 
 BPF_PINNED_PATH := /sys/fs/bpf/$(TARGET)
 XDP_NAME := dilih
-DEV := ens160
+DEV := enp1s0
 
 xdp: $(BPF_OBJ)
 	-bpftool net detach xdpgeneric dev $(DEV)
